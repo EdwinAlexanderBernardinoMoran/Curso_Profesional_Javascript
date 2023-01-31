@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <p><em>Abre la consola</em></p>
+    <!-- <script src="https://unpkg.com/jquery@3.6.3/dist/jquery.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+
+    <script>
+        /* GLOBAL ESCOPE
+            El Global Scope en JavaScript es el contexto de ejecución global que abarca todo el código JavaScript en una página web. Es decir, es el alcance más amplio disponible para el código y todas las variables y funciones definidas en este contexto están disponibles desde cualquier parte del código.
+        */
+
+        // var message = 'Hello, Platzi!'
+        // var $ = function (message) {
+        //     console.log("Say: " + message);
+        // }}
+
+        // -----------------------------------------------------------------------------------------------------------------------
+
+        /* FUNCTION SCOPE
+            El Function Scope en JavaScript es el contexto de ejecución dentro de una función. Las variables y funciones definidas dentro de una función solo están disponibles dentro de esa función y no están accesibles desde fuera de ella. El Function Scope permite crear ámbitos locales para las variables y funciones, lo que significa que los nombres de variables y funciones definidos dentro de una función no pueden ser sobrescritos o afectados por otras partes del código. Esto ayuda a proteger el código de colisiones de nombres y a mejorar la claridad y la organización del código.
+        */
+
+        // function printNumbers(params) {
+        //     for (var i = 0; i < 10; i++) {
+        //         function Eventually(n) {   
+        //             setTimeout(function () {
+        //                 console.log(n);
+        //             }, 100);
+        //         }
+        //         Eventually(i);
+        //     }
+        // }
+        // printNumbers();
+
+        /*
+        Block Scope:
+            El Block Scope en JavaScript se refiere a una sección delimitada de código que define un alcance local para las variables y las funciones. Un bloque de código se puede crear dentro de una estructura de control de flujo, como un ciclo "for" o una sentencia "if".
+
+            En resumen, el Block Scope es un concepto importante en JavaScript que permite crear ámbitos locales para las variables y funciones, lo que mejora la claridad y la organización del código.
+        */
+        function printNumbers2(params) {
+            for (let i = 0; i < 10; i++) {
+                setTimeout(function () {
+                    console.log(n);
+                }, 100);
+            }
+        }
+        printNumbers2();
+
+        // MODULE SCOPE:
+        // Cuando se denota un script de tipo module con el atributo type="module las variables son limitadas al archivo en el que están declaradas.
+    </script>
+</body>
+</html>
